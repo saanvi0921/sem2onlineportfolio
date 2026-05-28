@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saanvi Buragapu | Cybersecurity & CS Portfolio</title>
+    <style>
+        :root {
+            --primary: #6c5ce7;
+            --primary-dark: #5140d3;
+            --accent: #00cec9;
+            --bg-color: #f0f4f8;
+            --text-color: #2d3436;
+            --card-bg: #ffffff;
+        }
+
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            background-color: var(--bg-color); 
+            color: var(--text-color); 
+            line-height: 1.6; 
+        }
+
+        /* Navigation Links Layout */
+        nav { 
+            background-color: var(--primary); 
+            padding: 15px 0; 
+            position: sticky; 
+            top: 0; 
+            z-index: 1000; 
+            border-bottom-left-radius: 20px; 
+            border-bottom-right-radius: 20px; 
+            text-align: center; 
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+        }
+        nav a { 
+            color: white; 
+            text-decoration: none; 
+            margin: 0 20px; 
+            font-weight: bold; 
+            font-size: 1.1rem; 
+        }
+
+        /* Hero Banner Section */
+        .hero { 
+            background: linear-gradient(135deg, #a29bfe, var(--primary)); 
+            color: white; 
+            text-align: center; 
+            padding: 60px 20px; 
+            border-radius: 0 0 50px 50px; 
+        }
+        .hero h1 { margin: 0; font-size: 2.6rem; }
+        .hero p { font-size: 1.2rem; opacity: 0.9; margin-top: 10px; }
+
+        /* Structural Alignment Containers */
+        section { 
+            padding: 40px 30px; 
+            max-width: 900px; 
+            margin: 30px auto; 
+            background: var(--card-bg); 
+            border-radius: 25px; 
+            box-shadow: 0 10px 20px rgba(0,0,0,0.04); 
+        }
+        h2 { 
+            color: var(--primary); 
+            text-align: center; 
+            font-size: 2rem;
+            margin-bottom: 25px;
+        }
+        h3 {
+            color: var(--primary-dark);
+            font-size: 1.4rem;
+            margin-top: 0;
+            border-bottom: 2px solid #edf2f7;
+            padding-bottom: 8px;
+        }
+
+        /* About Section Grid Split */
+        .about-content { 
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            align-items: center;
+        }
+        @media (min-width: 768px) {
+            .about-content { flex-direction: row; }
+        }
+        .profile-pic { 
+            width: 200px; 
+            height: auto;
+            border-radius: 20px; 
+            border: 4px solid #fff; 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        /* Technical Project Layout Cards */
+        .project-card { 
+            background: #fafbfc; 
+            border: 1px solid #e1e8ed; 
+            border-radius: 16px; 
+            padding: 25px; 
+            margin-bottom: 30px;
+        }
+        .meta-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 15px;
+        }
+        .meta-table td {
+            padding: 8px 12px;
+            background: #edf2f7;
+            border: 1px solid #d1d8e0;
+            font-size: 0.9rem;
+        }
+
+        /* Inner Sub-sections */
+        .sub-block {
+            margin-top: 12px;
+            padding-left: 10px;
+            border-left: 3px solid var(--accent);
+        }
+        .sub-block strong {
+            color: var(--primary-dark);
+        }
+
+        /* Dynamic Interactive Links buttons */
+        .drive-btn {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            margin-top: 10px;
+            transition: background 0.2s ease, transform 0.1s ease;
+        }
+        .drive-btn:hover {
+            background-color: var(--primary-dark);
+        }
+
+        /* Resume Grid & Tag Items */
+        .resume-table { width: 100%; border-collapse: collapse; }
+        .resume-table td { padding: 12px; border-bottom: 1px solid #edf2f7; vertical-align: top; }
+        .date-col { width: 130px; font-weight: bold; color: var(--primary); line-height: 1.3; }
+        
+        .skills-zone { text-align: center; margin-bottom: 20px; }
+        .tag { 
+            display: inline-block; 
+            background: #ffeaa7; 
+            padding: 5px 14px; 
+            margin: 5px; 
+            border-radius: 20px; 
+            font-weight: bold; 
+            color: #d35400; 
+            font-size: 0.85rem;
+        }
+        
+        footer { text-align: center; padding: 25px; color: #7f8c8d; font-size: 0.85rem; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#projects">Technical Projects</a>
+        <a href="#resume">Resume & Skills</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="hero">
+        <h1>Saanvi Buragapu</h1>
+        <p>Computer Science Essentials Student & Aspiring Cybersecurity Professional</p>
+    </div>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <img src="mepic.jpg" alt="Saanvi Buragapu Profile" class="profile-pic">
+            <div>
+                <p>My career goal is to become a cybersecurity professional who protects government systems, organizations, and individuals from digital threats. I plan to earn a Bachelor of Science in Computer Science with a focus on cybersecurity, followed by industry certifications in ethical hacking and participation in National Cyber League competitions. This career path inspires me because cybersecurity combines problem solving, persistence, and real-world impact.</p>
+                <p>My interest in cybersecurity grew through hands-on experience in my Computer Science Essentials class, where I learned how to break down code line by line and analyze how systems operate internally. During our recent API "hack attack" assignment, I examined how vulnerabilities form and how they can be prevented, which strengthened my attention to detail and analytical mindset.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Technical Projects</h2>
+
+        <div class="project-card">
+            <h3>Project 1: Course Registration & Schedule System (PLTW 3.2.4)</h3>
+            <table class="meta-table">
+                <tr>
+                    <td><strong>Associated Source Files:</strong> main-5.py & student.py</td>
+                    <td><strong>Programming Language:</strong> Python 3 (OOP Module Layout)</td>
+                </tr>
+            </table>
+
+            <div class="sub-block">
+                <p><strong>Curriculum Learning Focus:</strong> Learn to create, manipulate, and access lists in Python®. Pair program to develop code that solves a complex database or resource assignment problem and generates deep computational understanding.</p>
+            </div>
+
+            <div class="sub-block">
+                <p><strong>Project Task Scenario:</strong> Looking over high school course schedules reveals the difficulty of registration logic. As our teacher noted, scheduling is bounded by demanding variables: staff contract hours, demand for courses, period runtime conflicts, and fixed class size limits. Lacking space in the institutional budget for retail scheduling software, this project modifies a course registration backend application to explore complex arrays and programmatic functions in Python.</p>
+            </div>
+
+            <div class="sub-block">
+                <p><strong>My Key Design Responsibilities:</strong> Co-developed the relational object layout. Engineered the blueprint for the structural `Student` class matrix inside `student.py`, configuring structural variable states (`student_id`), instant list arrays (`self.courses = []`), and data list modifiers (`self.courses.append(new_course)`) to record academic schedule profiles line by line without structural breakdown or variable collision loopholes.</p>
+            </div>
+
+            <div class="sub-block">
+                <p><strong>Growth & Professional Outcomes:</strong> Gained foundational knowledge in object-oriented encapsulation, module data links, and list extraction logic. Mastered the execution of clean traversal workflows (`for student in student_list:`) to systematically access custom data records.</p>
+            </div>
+
+            <div style="text-align: center; margin-top: 15px;">
+                <a href="https://drive.google.com/drive/folders/1ACbLQhdDk47ngP1yJ9DUh8T4q2GeAIIt?usp=sharing" target="_blank" class="drive-btn">📂 View 3.2.4 Project Folder on Drive</a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <h3>Project 2: Automated Combo Menu Engine (PLTW 3.2.1)</h3>
+            <table class="meta-table">
+                <tr>
+                    <td><strong>Associated Source File:</strong> SaanviB312 (1).py</td>
+                    <td><strong>Programming Language:</strong> Python 3 (Procedural Validation Script)</td>
+                </tr>
+            </table>
+
+            <div class="sub-block">
+                <p><strong>Curriculum Core Goals:</strong> 
+                    Apply coding fundamentals in a text-based language; apply file naming conventions and proper local file version control; develop and test application code incrementally; and develop a program independently.
+                </p>
+            </div>
+
+            <div class="sub-block">
+                <p><strong>Essential Questions Explored:</strong> 
+                    How do engineers utilize abstraction to bypass minor user-interface complexities and isolate a program's core architectural criteria? How can input validation frameworks protect backend financial records?
+                </p>
+            </div>
+
+            <div class="sub-block">
+                <p><strong>Project Task Scenario & Abstraction Strategy:</strong> The assignment was to build a menu, price items, and calculate monetary change, this project automates the ordering of a meal by offering option arrays, capturing inputs, and formatting order summaries. This highly abstracted application uses basic necessary structures to avoid interface complexity. In the <em>Combo Menu Revisited</em> phase, the solution uses dynamic list appending rules to record every individual item choice into an open tracking array (`order = []`), storing data systematically so it can be checked for combo deal bundle credits before outputting totals.</p>
+            </div>
+
+            <div class="sub-block">
+                <p><strong>My Key Design Responsibilities:</strong> Designed functional helper methods (`ask_yes_no`, `ask_size`) to handle structural strings uniformly. Programmed error-trapping input loops using `try/except ValueError` keywords to check data entries, ensuring the program requires clean integer calculations and remains safe against malformed system exploits. Tested conditional checks (`has_beverage and has_fries`) to calculate automated combo markdown credits.</p>
+            </div>
+
+            <div style="text-align: center; margin-top: 15px;">
+                <a href="https://drive.google.com/file/d/12tS8PxN2QAlaEN3U3E-wNExI1fG3RG-S/view?usp=sharing" target="_blank" class="drive-btn">📄 View 3.2.1 Source Code File on Drive</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="resume">
+        <h2>Resume & Experience</h2>
+        
+        <div class="skills-zone">
+            <h3>Technical Capabilities Matrix</h3>
+            <span class="tag">Object-Oriented Programming (OOP)</span>
+            <span class="tag">Python Scripting & Debugging</span>
+            <span class="tag">List Manipulation & Data Appending</span>
+            <span class="tag">Input Validation & Exception Trapping</span>
+            <span class="tag">JavaScript Software Development</span>
+            <span class="tag">Ethical Hacking Foundations</span>
+            <span class="tag">Network Architecture Basics</span>
+        </div>
+
+        <h3>Experience Details</h3>
+        <table class="resume-table">
+            <tr>
+                <td class="date-col">2024 – 2025<br><small style="color: #7f8c8d; font-weight: normal;">Past Member</small></td>
+                <td>
+                    <strong>Sharpface Robotics — Social Media Manager & Programming Support</strong><br>
+                    Supported programmatic configurations during build processes to establish clean robot control paths. Managed student alignment targets to fulfill requirements for FIRST Tech Challenge events.
+                </td>
+            </tr>
+            <tr>
+                <td class="date-col">2025<br><small style="color: #7f8c8d; font-weight: normal;">Participant</small></td>
+                <td>
+                    <strong>Inspirit AI Scholars Program — Research Assistant</strong><br>
+                    Collaborated under the guidance of Stanford Alumni researchers to analyze modern machine learning infrastructure templates, algorithmic dataset rules, and multi-tier logical systems.
+                </td>
+            </tr>
+            <tr>
+                <td class="date-col">2025<br><small style="color: #7f8c8d; font-weight: normal;">Finalist</small></td>
+                <td>
+                    <strong>Byju's Silicon Valley Challenge — Mobile App Creator</strong><br>
+                    Designed and built responsive application layers from scratch utilizing JavaScript logic. Integrated custom inputs and form verification structures, implementing fundamental cybersecurity concepts.
+                </td>
+            </tr>
+        </table>
+
+        <h3>Education</h3>
+        <p><strong>High School Student</strong> — Dublin, CA<br>
+        Enrolled in <em>Computer Science Essentials</em> with a practical focus on line-by-line security debugging, backend automation configurations, and array parsing mechanics.</p>
+    </section>
+
+    <section id="contact" style="text-align: center;">
+        <h2>Get In Touch</h2>
+        <p>Interested in collaborating or discussing cybersecurity opportunities? Let's connect!</p>
+        <p><strong>Location:</strong> Dublin, CA</p>
+        <p><strong>Email:</strong> <a href="mailto:Saanvi.Buragapu@gmail.com" style="color: var(--primary); font-weight: bold;">Saanvi.Buragapu@gmail.com</a></p>
+        <a href="mailto:Saanvi.Buragapu@gmail.com" class="drive-btn" style="background: var(--accent); border-radius: 20px; padding: 12px 30px; margin-top: 15px;">Send Me An Email</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Saanvi Buragapu. Portfolio formatted strictly to PLTW Computer Science standards.</p>
+    </footer>
+
+</body>
+</html>
